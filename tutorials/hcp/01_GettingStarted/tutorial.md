@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-author: 
+author: Katy Brooks and Carolyn Duby
 tutorial-id:
 experience: Beginner
 persona:
