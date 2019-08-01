@@ -27,6 +27,6 @@ This tutorial will show you how to open and navigate the Metron UIs and gives yo
 
 ## Outline
 
-- [Metron Management UI](#Metron Management UI)
+- [Metron Management UI](#metron-management-ui)
 
 ## Metron Management UI
