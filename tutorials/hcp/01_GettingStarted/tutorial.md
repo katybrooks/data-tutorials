@@ -57,4 +57,9 @@ You can consult the [Viewing Alerts User Guide](https://docs.hortonworks.com/HDP
 
 ## Ambari UI
 
+Open Ambari to view the status of the Metron infrastructure and start, stop, and restart services. Ambari also configures, installs, and upgrades Metron software. Open your browser to http://mobius.local:8080/ and enter admin as both the user and password to.
+
+![Ambari Screen](assets/ambari.png)
+The Quicklinks Ambari menu item launches the UIs for a service. For example, select the Management UI and Alerts UI by selecting Services from the upper right and then Metron from the left. Pull down quick links and select Management UI or Alerts UI to launch the Metron UIs.
+
 ## Appendix A: Quick Reference
