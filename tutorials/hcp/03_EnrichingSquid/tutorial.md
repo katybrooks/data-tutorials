@@ -108,4 +108,4 @@ Click save on the raw json editors and scroll down to click save on the sensor c
 ## View Field Transformations
 
 Generate more squid log entries. Open the Metron Alerts UI. The latest squid events will have new fields called full_hostname and domain_without_subdomains. The fields are derived from the url extracted from the original log entry. The timestamp_solr field is the event time stored in an ISO date format for building dashboards with the Banana UI. To duplicate the columns shown below click on teh gear icon and check the fields shown below. Uncheck the fields that are not shown.
-![Transformations in Alerts UI](assets/alerts_with transformations.png)
+![Transformations in Alerts UI]('assets/alerts_with_transformations.png')
