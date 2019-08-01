@@ -39,7 +39,10 @@ The management UI shows the sensors configured in Metron and their operational s
 
 Open Chrome and go to http://mobius.local:4200 and enter metron as both the user and the password as prompted to log in.
 ![Metron Login Screen](assets/metron_login.png)
-The Metron Management UI will open and 
+
+The Metron Management UI will open and show the sensors configured and their operational state (running or stopped and latency).
+![Metron Management Screen](assests/metron_management.png)
+
 
 ## Metron Alerts UI
 
