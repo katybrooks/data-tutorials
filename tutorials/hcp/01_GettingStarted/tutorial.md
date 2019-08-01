@@ -24,9 +24,25 @@ This tutorial will show you how to open and navigate the Metron UIs and gives yo
 ## Prerequisites
 
 - Download the [Cloudera Cybersecurity Platform sandbox](http://needlink.com)
+- Make sure you can open Ambari in the sandbox at http://mobius.local:8080 
 
 ## Outline
 
 - [Metron Management UI](#metron-management-ui)
+- [Metron Alerts UI](#metron-alerts-ui)
+- [Ambari UI](#ambari-ui)
+- [Appendix A: Quick Reference](#appendix-a-quick-reference)
 
 ## Metron Management UI
+
+The management UI shows the sensors configured in Metron and their operational state (running/stopped and latency). From the management UI you can create new sensors, view sensor configuration, browse raw logs sent by the sensor, and change the configuration of sensors.
+
+Open Chrome and go to http://mobius.local:4200 and enter metron as both the user and the password as prompted to log in.
+![Metron Login Screen](images/metron_login.png)
+The Metron Management UI will open and 
+
+## Metron Alerts UI
+
+## Ambari UI
+
+## Appendix A: Quick Reference
