@@ -23,4 +23,7 @@ This tutorial will show you how to open and navigate the Metron UIs and gives yo
 
 ## Prerequisites
 
-- Download the [single node Apache Metron](http://needlink.com)
+- Download the [Cloudera Cybersecurity Platform sandbox](http://needlink.com)
+
+## Outline
+
