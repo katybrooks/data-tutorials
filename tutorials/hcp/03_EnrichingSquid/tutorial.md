@@ -30,6 +30,8 @@ Adding enrichments to an event saves additional information in case the event ne
 - [View Geo Enriched Events](#view-geo-enriched-events)
 - [Add Field Transformations](#add-field-transformations)
 - [View Field Transformations](#view-field-transformations)
+- [Summary](#summary)
+- [Further Reading](#further-reading)
 
 ## Concepts
 
@@ -109,3 +111,11 @@ Click save on the raw json editors and scroll down to click save on the sensor c
 
 Generate more squid log entries. Open the Metron Alerts UI. The latest squid events will have new fields called full_hostname and domain_without_subdomains. The fields are derived from the url extracted from the original log entry. The timestamp_solr field is the event time stored in an ISO date format for building dashboards with the Banana UI. To duplicate the columns shown below click on teh gear icon and check the fields shown below. Uncheck the fields that are not shown.
 ![Transformations in Alerts UI](assets/alerts_with_transformations.png)
+
+## Summary
+
+You have now enriched squid logs with extra data to help analists investigate events if it becomes necessary. The next thing Metron does is triage.
+
+## Further Reading
+
+- [Stellar Quick Reference](https://docs.hortonworks.com/HDPDocuments/HCP1/HCP-1.6.1/stellar-quick-ref/content/introduction_to_stellar_language.html)
