@@ -31,6 +31,7 @@ This tutorial will show you how to open and navigate the Metron UIs and gives yo
 - [Metron Management UI](#metron-management-ui)
 - [Metron Alerts UI](#metron-alerts-ui)
 - [Ambari UI](#ambari-ui)
+- [Summary](#summary)
 - [Appendix A: Quick Reference](#appendix-a-quick-reference)
 
 ## Metron Management UI
@@ -62,4 +63,27 @@ Open Ambari to view the status of the Metron infrastructure and start, stop, and
 ![Ambari Screen](assets/ambari.png)
 The Quicklinks Ambari menu item launches the UIs for a service. For example, select the Management UI and Alerts UI by selecting Services from the upper right and then Metron from the left. Pull down quick links and select Management UI or Alerts UI to launch the Metron UIs.
 
+## Summary
+
+You should now be able to navigate to Metron Management and Alerts UIs both directly and through the Ambari UI.
+
+## Further Reading
+
+If you would like to continue learning about Apache Metron you can move on to the next tutorial on [parsing squid logs](../02_ParsingSquid/tutorial.md).
+
 ## Appendix A: Quick Reference
+
+|Credential| Value |
+|--|--|
+|Metron Host Name  | Provided to you  |
+|Metron Management UI|http://mobius.local:4200|
+|Metron Alerts UI|http://mobius.local:4201|
+|Metron Mgmt/Alerts Credentials|metron:metron|
+|Ambari URL|http://mobius.local:8080|
+|Ambari credentials|admin:admin|
+|mysql console|mysql -u *user_name* -p|
+|mysqldb root credentials|root:|
+|mysqldb metron credentials|metron:Myp@ssw0rd |
+|zoomdata url|http://mobius.local:6430|
+|zoomdata credentials|admin:Metron1234!|
+|solr admin UI|http://mobius.local:8983/solr/#/|
