@@ -380,3 +380,12 @@ PUT _template/mysquid
 
 
 18.  Congratulations!  You are now ingesting squid log events.  The next step is to add enrichments.
+
+## Next Lab
+[Enriching squid logs.](../03_EnrichingSquid/tutorial.md)
+
+## References
+
+[Metron Run Book](https://docs.hortonworks.com/HDPDocuments/HCP1/HCP-1.6.1/runbook/cybersecurity-runbook.pdf)
+
+[Metron Source Code](https://github.com/apache/metron)
