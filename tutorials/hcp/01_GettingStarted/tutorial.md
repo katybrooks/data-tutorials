@@ -38,7 +38,7 @@ This tutorial will show you how to open and navigate the Metron UIs and gives yo
 The management UI shows the sensors configured in Metron and their operational state (running/stopped and latency). From the management UI you can create new sensors, view sensor configuration, browse raw logs sent by the sensor, and change the configuration of sensors.
 
 Open Chrome and go to http://mobius.local:4200 and enter metron as both the user and the password as prompted to log in.
-![Metron Login Screen](images/metron_login.png)
+![Metron Login Screen](assets/metron_login.png)
 The Metron Management UI will open and 
 
 ## Metron Alerts UI
