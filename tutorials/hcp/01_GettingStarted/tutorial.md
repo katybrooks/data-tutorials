@@ -37,7 +37,7 @@ This tutorial will show you how to open and navigate the Metron UIs and gives yo
 
 The management UI shows the sensors configured in Metron and their operational state (running/stopped and latency). From the management UI you can create new sensors, view sensor configuration, browse raw logs sent by the sensor, and change the configuration of sensors.
 
-Open Chrome and go to http://mobius.local:4200 and enter metron as both the user and the password as prompted to log in.
+Open Chrome and go to http://mobius.local:4200/ and enter metron as both the user and the password as prompted to log in.
 
 ![Metron Login Screen](assets/metron_login.png)
 
@@ -45,6 +45,15 @@ The Metron Management UI will open and show the sensors configured and their ope
 ![Metron Management Screen](assets/metron_management.png)
 
 ## Metron Alerts UI
+
+The Metron Alerts UI shows enriched and triaged events stored in the Metron index. From the Alerts UI you can filter and sort events and view event fields. You can also escalate, add comments to, or group events. Open your browser to http://mobius.local:4201/ and once again enter metron for both user and password.
+
+![Metron Login Screen](assets/metron_login.png)
+
+The alerts UI wil open, listing the events reported to Metron, and allowing you to search, filter, and view details of alerts.
+![Metron Alerts Screen](assets/metron_alerts.png)
+
+You can consult the [Viewing Alerts User Guide](https://docs.hortonworks.com/HDPDocuments/HCP1/HCP-1.6.1/user-guide/content/viewing_alerts.html) for more information on how to use the Alerts UI.
 
 ## Ambari UI
 
