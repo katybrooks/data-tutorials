@@ -243,3 +243,61 @@ Functions are loading lazily in the background and will be unavailable until loa
 [Stellar]>>> quit
 ```
 
+## Applying malicious_domain and malicious_ip threat intelligence to squid events.
+
+1. Open the Metron config ui.
+
+2. Open the mysquid sensor and navigate to the Raw Json.
+
+3. In the sensor enrichment config section replace the threat intelligence fieldMap and fieldToTypeMap with the text below:
+
+```
+"fieldMap": {
+            "hbaseThreatIntel": [
+                "full_hostname",
+                "ip_dst_addr"
+            ]
+        },
+        "fieldToTypeMap": {
+            "full_hostname": [
+                "malicious_domain"
+            ],
+            "ip_dst_addr": [
+                "malicious_ip"
+            ]
+        },
+```  
+![Threat intel config before](threatintel_imgs/threat_intel_config_before.png)
+
+![Threat intel config after](threatintel_imgs/threat_intel_config_after.png)
+
+4. Generate some traffic that triggers the malicious_domain threat intelligence.
+
+```
+today=`date +'%s.000'`
+head malicious_domains.csv | awk -v todays_date=$today 'BEGIN {FS =","} {print todays_date"  66025 208.54.147.129 TCP_TUNNEL/200 7699 CONNECT " $1 ":443 - HIER_DIRECT/72.21.206.140 -"}' | /usr/hdp/current/kafka-broker/bin/kafka-console-producer.sh --topic mysquid --broker-list localhost:6667
+```
+
+5. Open the Metron Alerts UI.  Enter is_alert:true in the search.  Click the search button.  There will be some alerts.
+
+![Malicious domain alerts](threatintel_imgs/malicious_domain_alerts.png)
+
+6. Click on the alert. Scroll down to the bottom of the alert details.  The threat intel causing the alert is indicated by the threatintels.hbaseThreatIntel.full_hostname.malicious_domain field.
+
+![Malicious domain alert detail](threatintel_imgs/malicious_domain_alert_detail.png)
+
+7. Generate some traffic that triggers the malicious_ip threat intelligence. 
+
+```
+today=`date +'%s.000'`
+head malicious_ips.csv | awk -v todays_date=$today 'BEGIN {FS =","} {print todays_date"  66025 208.54.147.129 TCP_TUNNEL/200 7699 CONNECT my.example.com:443 - HIER_DIRECT/" $1 " -"}' | /usr/hdp/current/kafka-broker/bin/kafka-console-producer.sh --topic mysquid --broker-list localhost:6667
+```
+
+5. Click the search button with is_alert:true in the search field to refresh the events.  The new malicious ip alerts will appear. 
+
+![Malicious ip alerts](threatintel_imgs/malicious_ip_alerts.png)
+
+6. Click on the alert. Scroll down to the bottom of the alert details.  The threat intel causing the alert is indicated by the threatintels.hbaseThreatIntel.ip_dst_addr.malicious_ip field.
+
+![Malicious ip alert detail](threatintel_imgs/malicious_ip_alert_detail.png)
+
