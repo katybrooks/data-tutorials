@@ -7,6 +7,7 @@ persona:
 source: Hortonworks
 use case: 
 technology: Linux
+release: 
 environment: Sandbox
 product: 
 series: HCP
@@ -17,7 +18,6 @@ series: HCP
 ## Introduction
 
 In most cases this setup will be completed for you, but in case it hasn't or doesn't work we are providing the information so you can set it up. Setting up a host name allows us to use easier to remember and type phrases, such as mobius.local (in HCP tutorials), instead of using your IP address to navigate your browser.
-In this tutorial we will provide instructions for this set up both in Linux, Unix, and OSX, as well as in Windows.
 
 ## Prerequisites
 
