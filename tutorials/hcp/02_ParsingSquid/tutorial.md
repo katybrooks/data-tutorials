@@ -161,7 +161,7 @@ http://mobius.local:8983/solr/#/~collections
 5. Right click on the copy of PublishSquidToMetron and select Configure.
 
 6. Click on the Settings tab and change the name to PublishMySquidToMetron.
-![Change Processor Name](parsingsquid_imgs/nifi_04.png
+![Change Processor Name](parsingsquid_imgs/nifi_04.png)
 
 7. Click the Properties tab and change Topic Name to mysquid.
 ![Change Topic Name](parsingsquid_imgs/nifi_03.png)
