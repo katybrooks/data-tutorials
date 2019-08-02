@@ -25,14 +25,14 @@ There are no prerequisites for this tutorial.
 
 ## Outline
 
-- [Linux/Unix/OSX](#linux-unix-osx)
-- [Windows](#windows)
+- [Linux (Unix)](#linux-unix)
 
-## Linux/Unix/OSX
+## Linux (Unix)
 
-Open terminal and enter `sudo vi /etc/hosts` to open the hosts file. Hit `i` to edit the file and add a line `host_ip mobius.local` where *host_ip* is your IP address.
+Before you can set up your host name you need to know your IP address. 
+
+When you are ready to continue, open terminal and enter `sudo vi /etc/hosts` to open the hosts file. Hit `i` to edit the file and add a line `host_ip mobius.local` where *host_ip* is your IP address (*mobius.local* may be different if you are doing something other than the HCP tutorials).
+
 ![Hosts file](assets/hosts_file.png)
 
-Once that is done hit escape to get back to the command line and type `:wq` and enter to save and exit the file.
-
-## Windows
+Once that is done hit escape to get back to the command line and type `:wq` and enter to save and exit the file. Now you should be able to 
