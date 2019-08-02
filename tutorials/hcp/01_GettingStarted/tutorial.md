@@ -69,7 +69,7 @@ You should now be able to navigate to Metron Management and Alerts UIs both dire
 
 ## Further Reading
 
-If you would like to continue learning about Apache Metron you can move on to the next tutorial on [parsing squid logs](../02_ParsingSquid/tutorial.md).
+If you would like to continue learning about Apache Metron you can move on to the next tutorial on [parsing squid logs](../02_ParsingSquid/tutorial.md)).
 
 ## Appendix A: Quick Reference
 
