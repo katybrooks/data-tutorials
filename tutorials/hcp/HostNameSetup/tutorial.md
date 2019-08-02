@@ -29,9 +29,9 @@ There are no prerequisites for this tutorial.
 
 ## Linux (Unix)
 
-Before you can set up your host name you need to know your IP address. 
+Before you can set up your host name you need to know your IP address inside the sandbox you're running. Open terminal and enter `ifconfig` to see more information about your VM. There you should be able tyo locate your IP address. I recommend testing the IP with tthe port you intend to use before setting it to your host name.
 
-When you are ready to continue, open terminal and enter `sudo vi /etc/hosts` to open the hosts file. Hit `i` to edit the file and add a line `host_ip mobius.local` where *host_ip* is your IP address (*mobius.local* may be different if you are doing something other than the HCP tutorials).
+When you are ready to continue fter testing it, go back to terminal and enter `sudo vi /etc/hosts` to open the hosts file. Hit `i` to edit the file and add a line `host_ip mobius.local` where *host_ip* is your IP address (*mobius.local* may be different if you are doing something other than the HCP tutorials).
 
 ![Hosts file](assets/hosts_file.png)
 
