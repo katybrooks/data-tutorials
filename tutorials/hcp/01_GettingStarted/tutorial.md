@@ -10,7 +10,7 @@ technology: Apache Metron
 release: 
 environment: Sandbox
 product: HCP
-series: 
+series: HCP > Apache Metron
 ---
 
 # Getting Started with Metron
@@ -23,7 +23,7 @@ This tutorial will show you how to open and navigate the Metron UIs and gives yo
 
 ## Prerequisites
 
-- Download the [Cloudera Cybersecurity Platform sandbox](http://needlink.com)
+- Download the [Cloudera Cybersecurity Platform sandbox]
 - Make sure you can open Ambari in the sandbox at http://mobius.local:8080 (If you can't please complete [this tutorial](../HostNameSetup/tutorial.md).)
 
 ## Outline
