@@ -35,4 +35,4 @@ When you are ready to continue fter testing it, go back to terminal and enter `s
 
 ![Hosts file](assets/hosts_file.png)
 
-Once that is done hit escape to get back to the command line and type `:wq` and enter to save and exit the file. Now you should be able to 
+Once that is done hit escape to get back to the command line and type `:wq` and enter to save and exit the file. Now you should be able to access Ambari or whichever page you are looking for using the host name you set with the appropriate port.
