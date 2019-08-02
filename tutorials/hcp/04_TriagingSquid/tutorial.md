@@ -150,7 +150,7 @@ Once a potential typosquatted domain is identified, investigated and found to be
 ![CNN no typosquat](triagingsquid_imgs/metron_no_cnn_alert.png)
 
 ## Next Lab
-[Profiler basics.](../05_ProfilerBasics/README.md)
+[Profiler basics.](../05_ProfilerBasics/tutorial.md)
 
 ## References
 [Metron typosquat detection use case](https://metron.apache.org/current-book/use-cases/typosquat_detection/index.html)
