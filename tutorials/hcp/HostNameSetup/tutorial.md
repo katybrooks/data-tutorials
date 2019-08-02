@@ -30,3 +30,4 @@ There are no prerequisites for this tutorial.
 
 ## Linux/Unix/OSX
 
+## Windows
