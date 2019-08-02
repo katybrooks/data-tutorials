@@ -29,6 +29,7 @@ series: HCP > Apache Metron
 - [Creating Profiles](#creating-profiles)
   - [Stellar Shell and Profile Debugger](#stellar-shell-and-profile-debugger)
   - [Create a Profile Execution Environment](#create-a-profile-exectution-environment)
+- [Flush the Profiler](#flush-the-profiler)
 
 ## Creating Profiles
 
@@ -100,4 +101,16 @@ Apply the message to your Profiler as many times as you like.
 Profiler{1 profile(s), 1 messages(s), 1 route(s)}
 [Stellar]>>> PROFILER_APPLY(msg, profiler)
 Profiler{1 profile(s), 2 messages(s), 2 route(s)}
+```
+## Flush the Profiler
+
+A flush is what occurs at the end of each profiler interval, for example a 15 minute period, in the Profiler. The result is a list of profile measurements. Each measurement is a map containing detailed information about the profile data that has been generated. The value field is what is written to HBase when runningth is profile in the Profiler topology.
+
+There will always be one measurement for each [profile, entity] pair. This profile simply counts the number of messages by IP source address. Notice that the value is '3' for the entity '10.0.0.1' as we applied 3 messages with an 'ip_src_addr' of '10.0.0.1'.
+
+```
+[Stellar]>>> values := PROFILER_FLUSH(profiler)
+[Stellar]>>> values
+[{period={duration=900000, period=1669628, start=1502665200000, end=1502666100000},
+profile=hello-world, groups=[], value=3, entity=10.0.0.1}]
 ```
