@@ -116,8 +116,41 @@ For this example, we use a very simple triage rule to detect [typosquatting](htt
 
 13. To see all the alerts for a particular domain, click on the domain name.   The Alerts UI displays only the alerts with the selected domain name.
 
-<img src="images/filter_alerts.png" width="95%" height="95%" title="Filtered Alerts"> ![Filtered Alerts](triagingimages_imgs.png/filter_alerts.png)
+![Filtered Alerts](triagingimages_imgs.png/filter_alerts.png)
 
 14. To remove the filter, hover over the search criteria that you want to remove and click on the x.  To view all events, click the x on the Searches field.
 
-<img src="images/remove_filter.png" width="95%" height="95%" title="Remove Filters"> ![Remove Filters](triagingsquid_imgs/remove_filter.png)
+![Remove Filters](triagingsquid_imgs/remove_filter.png)
+
+## Improving Scoring with a Domain Whitelist
+
+Once a potential typosquatted domain is identified, investigated and found to be legitimate, stop future alerts by using a domain whitelist enrichment.
+
+1. Open the Metron Configuration UI.  
+
+2. Click on the pencil icon next to the mysquid sensor.  The sensor configuration form opens.
+
+3. In the Advanced section, click on the >> next to the Raw json field.
+
+4. Replace the is_potential_typosquat field with the value below:
+
+```
+"is_potential_typosquat := not (ENRICHMENT_EXISTS('domain_whitelist', domain_without_tld, 'enrichment', 't')) && BLOOM_EXISTS(OBJECT_GET('/tmp/reference/alexa10k_filter.ser'), domain_without_tld)",
+```
+![Domain Whitelist](triagingsquid_imgs/domain_whitelist.png)
+
+5. Click Save under the Raw Json section.
+
+6. Click Save on the sensor configuration.
+
+7. Open cnn.com and npr.org in browser connected to the Metron proxy.
+
+8. Open the Metron Alerts UI.  Click on the timestamp column header until the events are sorted descending by timestamp.  Proxy events to cnn.com and npr.org are no longer alerts. 
+
+![CNN no typosquat](triagingsquid_imgs/metron_no_cnn_alert.png)
+
+## Next Lab
+[Profiler basics.](../05_ProfilerBasics/README.md)
+
+## References
+[Metron typosquat detection use case](https://metron.apache.org/current-book/use-cases/typosquat_detection/index.html)
