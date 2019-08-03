@@ -30,6 +30,11 @@ series: HCP > Apache Metron
   - [Stellar Shell and Profile Debugger](#stellar-shell-and-profile-debugger)
   - [Create a Profile Execution Environment](#create-a-profile-exectution-environment)
 - [Flush the Profiler](#flush-the-profiler)
+- [Apply Live Telemetry](#apply-live-telemetry)
+- [Deploy Your First Profile](#deploy-your-first-profile)
+- [Access Deployed Profiles](#access-deployed-profiles)
+- [Summary](#summary)
+
 
 ## Creating Profiles
 
@@ -114,3 +119,68 @@ There will always be one measurement for each [profile, entity] pair. This profi
 [{period={duration=900000, period=1669628, start=1502665200000, end=1502666100000},
 profile=hello-world, groups=[], value=3, entity=10.0.0.1}]
 ```
+
+## Apply Live Telemetry
+
+Once you are happy with your profile against a controlled data set, it can be useful to introduce more complex, live data. This example extracts 10 messages of live, enriched telemetry to test your profile(s).
+
+```
+[Stellar]>>> %define bootstrap.servers := "localhost:6667"
+[Stellar]>>> msgs := KAFKA_GET("indexing", 10)
+[Stellar]>>> LENGTH(msgs)
+10
+```
+If you don't get any messages, fire off a few squid client commands:
+
+```
+curl -I --proxy ec2-54-215-245-197.us-west-1.compute.amazonaws.com:3128 https://cnn.com
+```
+
+Apply those 10 messages to your profile.
+
+```
+[Stellar]>>> PROFILER_APPLY(msgs, profiler)
+  Profiler{1 profile(s), 10 messages(s), 10 route(s)}
+```
+
+## Deploy Your First Profile
+
+Load the Metron environment variables: `source /etc/default/metron`
+
+Edit `/usr/hcp/current/metron/config/zookeeper/profiler.json` using your favorite editor (e.g. vi or emacs)
+
+Add the `hello-world` profile and save the file
+
+```
+{
+      "profile": "hello-world",
+      "onlyif":  "exists(ip_src_addr)",
+      "foreach": "ip_src_addr",
+      "init":    { "count": "0" },
+      "update":  { "count": "count + 1" },
+      "result":  "count"
+}
+```
+
+Push the updates profiler configuration
+
+```
+$ cd $METRON_HOME
+$ bin/zk_load_configs.sh -m PUSH -i config/zookeeper/ -z localhost:2181
+```
+
+## Access Deployed Profiles
+
+If you have earlier deployed profiles, you can get their values with `PROFILE_GET`. For example:
+
+```
+PROFILE_GET( "locations_by_user", "user1", PROFILE_FIXED(120, "DAYS"))
+```
+
+## Summary
+
+You have now learned the basics of creating and working with Apache Metron profiles. Parts of the Stellar language were also introduced in this tutorial.
+
+## Further Reading
+
+- [Stellar Quick Reference](https://docs.hortonworks.com/HDPDocuments/HCP1/HCP-1.6.1/stellar-quick-ref/content/introduction_to_stellar_language.html)
