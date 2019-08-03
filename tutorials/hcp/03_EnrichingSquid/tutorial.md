@@ -63,7 +63,7 @@ Scroll to the bottom of the screen and click save on the sensor and configure yo
 
 ## View Geo Enriched Events
 
-Open the Metron Alerts UI to see the events have been enriched with geo locations on their destination ip addresses. Click between the columns to open the event detail. The components of the geo enrichments begin with enrichments.geo.ip_dst_addr if using Solr or enrichments:geo:ip_dst_addr if using Elastic Search indices. The geocoding includes the following attributes for each known ip address: city, country, latitude, longitude, postal code, DMA code, location ID, and location point. The attributes present may differ depending on how much information is available for a specific ip address.
+Open the Metron Alerts UI to see the events have been enriched with geo locations on their destination ip addresses. Click between the columns to open the event detail. The components of the geo enrichments begin with enrichments.geo.ip_dst_addr if using Solr index. The geocoding includes the following attributes for each known ip address: city, country, latitude, longitude, postal code, DMA code, location ID, and location point. The attributes present may differ depending on how much information is available for a specific ip address.
 ![Geocode enrichment details](assets/geo_code_enrich_detail.png)
 
 ## Add Field Transformations
