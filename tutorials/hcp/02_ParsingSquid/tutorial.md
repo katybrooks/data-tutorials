@@ -1,7 +1,7 @@
 ---
 title: Parsing Squid Logs
 author: James Evans Morantus and Carolyn Duby
-tutorial-id: 
+tutorial-id: 100
 experience: Intermediate
 persona: 
 source: Hortonworks
@@ -10,7 +10,7 @@ technology: Apache Metron
 release: 
 environment: Sandbox
 product: HCP
-series: 
+series: HCP > Apache Metron
 ---
 
 # Parsing Squid Logs
