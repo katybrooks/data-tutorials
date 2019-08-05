@@ -2,7 +2,7 @@
 title: Applying Threat Intelligence to Squid Logs
 author: James Evans Morantus and Carolyn Duby
 tutorial-id: 
-experience: Beginner
+experience: Intermediate
 persona: 
 source: Hortonworks
 use case: 
