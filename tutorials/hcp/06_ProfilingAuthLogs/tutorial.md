@@ -1,7 +1,7 @@
 ---
 title: User and Entity Behavior Analytics(UEBA) with User Authentication Events
 author: James Evans Morantus and Carolyn Duby
-tutorial-id: 
+tutorial-id: 100
 experience: Intermediate
 persona: 
 source: Hortonworks
@@ -9,13 +9,15 @@ use case:
 technology: Apache Metron
 environment: Sandbox
 product: HCP
-series: 
+series: HCP > Apache Metron
 ---
+
 ## Objectives
 
 After this lab you will be able to:
 
 1. Describe the components of a Metron profile.
+
 2. Explain how to detect anomalous logins and triage events using Metron profiles.
 
 ## Background
