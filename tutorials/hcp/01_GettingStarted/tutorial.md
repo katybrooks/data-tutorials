@@ -2,7 +2,7 @@
 title: Getting Started
 author: Katy Brooks and Carolyn Duby
 tutorial-id:
-experience: Beginner
+experience: Intermediate
 persona:
 source: Hortonworks
 use case: 
