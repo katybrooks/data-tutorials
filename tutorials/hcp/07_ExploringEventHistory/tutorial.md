@@ -34,3 +34,8 @@ Apache Metron and the Hadoop ecosystem offer many options for analyzing stored c
 3. Banana and Kibana Dashboards
 
 4. Third party business intelligence tools 
+
+# Metron Alerts UI
+
+The Metron Alerts UI reads events from the index which provides a very flexible search API that quickly filters the haystack to a subset of events.  See the [Getting started](../01_GettingStarted/tutorial.md) lab for instructions on opening the Metron Alerts UI.  Once the UI is open, enter a simple or complex query in the UI and the filtered events will display in the UI.  Click on the headers to sort ascending or descending by an event field.  Complete the earlier labs to see the Alerts UI in action.
+
