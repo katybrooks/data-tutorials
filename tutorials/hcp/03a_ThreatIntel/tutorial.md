@@ -18,9 +18,12 @@ series:
 ## Objectives
 
 After this lab you will be able to:
- 1. Load threat intelligence stored in a file.
- 2. Load threat intelligence through a streaming writer. 
- 2. Apply threat intelligence to a field in an event.
+
+1. Load threat intelligence stored in a file.
+
+2. Load threat intelligence through a streaming writer. 
+
+3. Apply threat intelligence to a field in an event.
  
 ## Overview
 
