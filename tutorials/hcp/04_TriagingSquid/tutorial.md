@@ -1,7 +1,7 @@
 ---
 title: Triaging Squid Events
 author: James Evans Morantus and Carolyn Duby
-tutorial-id: 
+tutorial-id: 100
 experience: Intermediate
 persona: 
 source: Hortonworks
@@ -9,7 +9,7 @@ use case:
 technology: Apache Metron
 environment: Sandbox
 product: HCP
-series: 
+series: HCP > Apache Metron
 ---
 
 # Triaging Squid events
