@@ -2,7 +2,7 @@
 title: Enriching Squid Logs
 author: Katy Brooks and Carolyn Duby
 tutorial-id: 
-experience: Beginner, Intermediate
+experience: Intermediate
 persona: 
 source: Hortonworks
 use case: 
