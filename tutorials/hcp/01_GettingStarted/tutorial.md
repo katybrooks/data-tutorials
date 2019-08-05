@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 author: Katy Brooks and Carolyn Duby
-tutorial-id:
+tutorial-id: 100
 experience: Intermediate
 persona:
 source: Hortonworks
